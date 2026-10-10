@@ -8,3 +8,6 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Workflow directory (avoids PAT workflow scope rejection)
+.github/

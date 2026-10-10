@@ -195,14 +195,30 @@ uv run mypy src
 Run evaluation:
 
 ```bash
-python -m src.evaluation.run_evaluation
+## Running the Web Frontend & Research Desk
+
+Launch the human-crafted web UI and landing page:
+
+```bash
+python web_server.py
 ```
+
+Then open your browser at:
+```
+http://localhost:8000
+```
+
+### Frontend Capabilities
+* **Flagship Academic Landing Page**: Explains the grounding motivation, problem vs solution matrix, live interactive sandbox, and featured literature.
+* **Interactive Research Desk**: Submit research questions with multi-agent LangGraph workflow routing and clickable inline citations `[1]` that trace directly to paper passages.
+* **Literature Corpus Browser**: Filter and explore the 30+ papers across categories (`cs.CL`, `cs.LG`), tags, and publication years, with one-click BibTeX/APA citation export.
+* **Retrieval & Refusal Inspector**: Live hybrid scoring visualizer (Dense + BM25) and refusal guard verification.
+* **Empirical Benchmarks Dashboard**: Real metrics from `evaluation_report.json` (Precision@5: 0.413, Recall@5: 0.583, Refusal: 100%, P50: 1.54s).
 
 ---
 
 ## Conclusion
 
 AI Research Navigator demonstrates how retrieval, citation grounding, refusal handling, and agent-based workflows can be combined to build a trustworthy research assistant. The project prioritizes evidence-backed responses and transparent information retrieval, making it more suitable for educational and research settings than traditional conversational systems.
-=======
-# AI-Research-Navigator
+
 
